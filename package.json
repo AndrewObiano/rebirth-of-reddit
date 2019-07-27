@@ -1,0 +1,22 @@
+{
+  "name": "rebirth-of-reddit",
+  "version": "0.0.1",
+  "description": "Project to create a new theme for Reddit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewObiano/rebirth-of-reddit.git"
+  },
+  "keywords": [
+    "reddit"
+  ],
+  "author": "Andrew Obiano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewObiano/rebirth-of-reddit/issues"
+  },
+  "homepage": "https://github.com/AndrewObiano/rebirth-of-reddit#readme"
+}
