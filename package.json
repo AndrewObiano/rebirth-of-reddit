@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/AndrewObiano/rebirth-of-reddit/issues"
   },
-  "homepage": "https://github.com/AndrewObiano/rebirth-of-reddit#readme"
+  "homepage": "https://github.com/AndrewObiano/rebirth-of-reddit#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  }
 }

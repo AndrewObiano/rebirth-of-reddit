@@ -1,13 +1,5 @@
-$titleFont: "Oswald", sans-serif;
-$postFont: "Lato", sans-serif;
-$linkColor: rgb(196, 196, 196);
-$postBoxHeight: 400px;
-$postBoxWidth: 300px;
-$contentPadding: 500px;
-
 body {
-  margin: -3px;
-}
+  margin: -3px; }
 
 .headerDiv {
   background-color: white;
@@ -15,36 +7,31 @@ body {
   background-repeat: no-repeat;
   background-size: 410px 10px;
   background-position-x: center;
-  background-position-y: center;
-  .logo {
+  background-position-y: center; }
+  .headerDiv .logo {
     width: 120px;
     height: 60px;
     display: block;
-    margin: 0 auto;
-  }
-}
+    margin: 0 auto; }
 
 .topBar {
   height: 25%;
   width: 100%;
-  background-color: rgb(80, 80, 80);
+  background-color: #505050;
   text-align: center;
-  padding: 10px;
-  .subs {
-    font-family: $titleFont;
+  padding: 10px; }
+  .topBar .subs {
+    font-family: "Oswald", sans-serif;
     font-weight: 800;
     font-size: 1em;
     margin-left: 0.15em;
     margin-right: 0.15em;
     text-decoration: none;
     display: inline-block;
-    color: $linkColor;
-  }
-  .subs:hover {
-    color: rgb(255, 115, 0);
-    text-shadow: 0px 2px 5px black;
-  }
-}
+    color: #c4c4c4; }
+  .topBar .subs:hover {
+    color: #ff7300;
+    text-shadow: 0px 2px 5px black; }
 
 #contents {
   margin-top: 0%;
@@ -53,46 +40,39 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   background-image: url("../assets/bg.jpg");
-  padding-left: $contentPadding;
-  padding-right: $contentPadding;
-  .postDiv {
+  padding-left: 500px;
+  padding-right: 500px; }
+  #contents .postDiv {
     border: 2px solid black;
     padding: 20px;
-    height: $postBoxHeight;
-    width: $postBoxWidth;
+    height: 400px;
+    width: 300px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 2.5%;
     background-color: white;
-    overflow: auto;
-  }
-  .postDiv:hover {
+    overflow: auto; }
+  #contents .postDiv:hover {
     border: 5px solid orangered;
     padding: 17px;
     -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
-  }
-  .title {
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75); }
+  #contents .title {
     margin-top: 0%;
     margin-bottom: 2%;
-    font-family: $titleFont;
-    font-weight: bold;
-  }
-  .postPic {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold; }
+  #contents .postPic {
     height: 200px;
-    width: $postBoxWidth;
-    object-fit: contain;
-  }
-  .postTime {
+    width: 300px;
+    object-fit: contain; }
+  #contents .postTime {
     margin-top: 0%;
-    font-family: $postFont;
+    font-family: "Lato", sans-serif;
     opacity: 0.5;
-    font-size: 1em;
-  }
-  .postText {
-    font-family: $postFont;
+    font-size: 1em; }
+  #contents .postText {
+    font-family: "Lato", sans-serif;
     font-size: 15px;
-    word-wrap: break-word;
-  }
-}
+    word-wrap: break-word; }
