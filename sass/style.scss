@@ -1,12 +1,17 @@
 $titleFont: "Oswald", sans-serif;
 $postFont: "Lato", sans-serif;
 $linkColor: rgb(196, 196, 196);
-$postBoxHeight: 400px;
-$postBoxWidth: 300px;
-$contentPadding: 500px;
+
+:root {
+  // CSS variables so previously declared value can be changed
+  --contentPadding: 700px;
+  --postBoxHeight: 400px;
+  --postBoxWidth: 300px;
+}
 
 body {
   margin: -3px;
+  overflow-x: hidden;
 }
 
 .headerDiv {
@@ -21,6 +26,48 @@ body {
     height: 60px;
     display: block;
     margin: 0 auto;
+  }
+}
+
+.plus {
+  border: 2px solid black;
+  display: block;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  margin-right: 1%;
+  .plusSign {
+    position: absolute;
+    font-size: 2.5em;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-52%) translateX(-49%);
+    user-select: none;
+  }
+}
+
+.plus:hover {
+  border: 2px solid orangered;
+  background-color: orangered;
+  .plusSign:hover {
+    color: white;
+  }
+}
+
+.footerDiv {
+  z-index: 1;
+  background-color: rgb(80, 80, 80);
+  padding: 2px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  .ig:hover {
+    content: url("../assets/instagram_orange.svg");
   }
 }
 
@@ -53,16 +100,18 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   background-image: url("../assets/bg.jpg");
-  padding-left: $contentPadding;
-  padding-right: $contentPadding;
+  padding-left: var(--contentPadding);
+  padding-right: var(--contentPadding);
+  margin-bottom: 30px;
   .postDiv {
     border: 2px solid black;
     padding: 20px;
-    height: $postBoxHeight;
-    width: $postBoxWidth;
+    height: var(--postBoxHeight);
+    width: var(--postBoxWidth);
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 2.5%;
+    margin-bottom: 20px;
     background-color: white;
     overflow: auto;
   }
@@ -73,15 +122,19 @@ body {
     -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
   }
+  .postDiv::-webkit-scrollbar {
+    display: none;
+  }
   .title {
     margin-top: 0%;
     margin-bottom: 2%;
     font-family: $titleFont;
     font-weight: bold;
+    line-height: 1;
   }
   .postPic {
     height: 200px;
-    width: $postBoxWidth;
+    width: var(--postBoxWidth);
     object-fit: contain;
   }
   .postTime {
@@ -94,5 +147,95 @@ body {
     font-family: $postFont;
     font-size: 15px;
     word-wrap: break-word;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 2200px) {
+  :root {
+    --contentPadding: 550px;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  :root {
+    --contentPadding: 400px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  :root {
+    --contentPadding: 300px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  :root {
+    --contentPadding: 150px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  :root {
+    --contentPadding: 50px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --contentPadding: 10px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --contentPadding: 10px;
+    --postBoxHeight: 300px;
+    --postBoxWidth: 225px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  :root {
+    --contentPadding: 50px;
+    --postBoxHeight: 200px;
+    --postBoxWidth: 170px;
+  }
+  #contents {
+    .postDiv {
+      padding: 5px;
+    }
+    .postDiv:hover {
+      padding: 2px;
+    }
+    .title {
+      font-size: 1em;
+    }
+    .postTime {
+      font-size: 0.5em;
+    }
+    .postText {
+      font-size: 0.5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --contentPadding: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    --contentPadding: 15px;
+    --postBoxHeight: 150px;
+    --postBoxWidth: 120px;
+  }
+  #contents {
+    .postDiv {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 }

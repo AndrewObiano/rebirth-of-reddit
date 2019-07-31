@@ -7,7 +7,6 @@ let contents = document.getElementById("contents");
 
 function redditReq() {
   let obj = JSON.parse(this.responseText);
-  console.log(obj.data.children);
 
   contents.innerHTML = ""; // clears previous contents
 
@@ -46,12 +45,56 @@ function redditReq() {
   }
 }
 
-let movieVar = document.querySelector("#movies");
-console.log(movieVar);
+let subArr = [
+  "https://www.reddit.com/r/javascript/.json",
+  "https://www.reddit.com/r/weightlifting.json",
+  "https://www.reddit.com/r/PeopleFuckingDying.json",
+  "https://www.reddit.com/r/pics.json",
+  "https://www.reddit.com/r/memes.json",
+  "https://www.reddit.com/r/MurderedByWords.json",
+  "https://www.reddit.com/r/gifs.json"
+];
 
-movieVar.addEventListener("click", function() {
+let subArrNames = [
+  "JAVASCRIPT",
+  "WEIGHTLIFTING",
+  "PEOPLEFUCKINGDYING",
+  "PICS",
+  "MEMES",
+  "MURDEREDBYWORDS",
+  "GIFS"
+];
+
+document.querySelectorAll(".subs")[0].addEventListener("click", function() {
+  const randomSub = new XMLHttpRequest();
+  let randomNum = Math.floor(Math.random() * 7);
+  document.querySelectorAll(".subs")[0].innerHTML = subArrNames[randomNum];
+  randomSub.addEventListener("load", redditReq);
+  randomSub.open("GET", subArr[randomNum]);
+  randomSub.send();
+});
+
+document.querySelectorAll(".subs")[2].addEventListener("click", function() {
   const movies = new XMLHttpRequest();
   movies.addEventListener("load", redditReq);
   movies.open("GET", "https://www.reddit.com/r/movies.json");
   movies.send();
+});
+
+document.querySelectorAll(".subs")[4].addEventListener("click", function() {
+  const mechkeys = new XMLHttpRequest();
+  mechkeys.addEventListener("load", redditReq);
+  mechkeys.open("GET", "https://www.reddit.com/r/mechanicalkeyboards.json");
+  mechkeys.send();
+});
+
+document.querySelectorAll(".subs")[6].addEventListener("click", function() {
+  const market = new XMLHttpRequest();
+  market.addEventListener("load", redditReq);
+  market.open("GET", "https://www.reddit.com/r/mechmarket.json");
+  market.send();
+});
+
+document.querySelector(".ig").addEventListener("click", function() {
+  window.location = "https://www.instagram.com/andrewobiano/";
 });
