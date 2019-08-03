@@ -10,8 +10,8 @@ $linkColor: rgb(196, 196, 196);
 }
 
 body {
-  margin: -3px;
-  overflow-x: hidden;
+  margin: -3px; // get rid of random white space
+  overflow-x: hidden; // get rid of unintentional x scroll
 }
 
 .headerDiv {
@@ -93,6 +93,7 @@ body {
   }
 }
 
+// Covers all the posts in the body
 #contents {
   margin-top: 0%;
   display: flex;
@@ -123,7 +124,7 @@ body {
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
   }
   .postDiv::-webkit-scrollbar {
-    display: none;
+    display: none; // hide the scroll bar
   }
   .title {
     margin-top: 0%;

@@ -65,6 +65,7 @@ let subArrNames = [
   "GIFS"
 ];
 
+// RANDOM
 document.querySelectorAll(".subs")[0].addEventListener("click", function() {
   const randomSub = new XMLHttpRequest();
   let randomNum = Math.floor(Math.random() * 7);
@@ -74,6 +75,7 @@ document.querySelectorAll(".subs")[0].addEventListener("click", function() {
   randomSub.send();
 });
 
+// MOVIES
 document.querySelectorAll(".subs")[2].addEventListener("click", function() {
   const movies = new XMLHttpRequest();
   movies.addEventListener("load", redditReq);
@@ -81,6 +83,7 @@ document.querySelectorAll(".subs")[2].addEventListener("click", function() {
   movies.send();
 });
 
+// MECHANICAL KEYBOARDS
 document.querySelectorAll(".subs")[4].addEventListener("click", function() {
   const mechkeys = new XMLHttpRequest();
   mechkeys.addEventListener("load", redditReq);
@@ -88,6 +91,7 @@ document.querySelectorAll(".subs")[4].addEventListener("click", function() {
   mechkeys.send();
 });
 
+// MECH MARKET
 document.querySelectorAll(".subs")[6].addEventListener("click", function() {
   const market = new XMLHttpRequest();
   market.addEventListener("load", redditReq);
@@ -95,6 +99,7 @@ document.querySelectorAll(".subs")[6].addEventListener("click", function() {
   market.send();
 });
 
+// MY INSTAGRAM
 document.querySelector(".ig").addEventListener("click", function() {
   window.location = "https://www.instagram.com/andrewobiano/";
 });
