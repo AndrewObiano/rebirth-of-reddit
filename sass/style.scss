@@ -29,33 +29,6 @@ body {
   }
 }
 
-.plus {
-  border: 2px solid black;
-  display: block;
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  right: 0;
-  top: 20px;
-  margin-right: 1%;
-  .plusSign {
-    position: absolute;
-    font-size: 2.5em;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-52%) translateX(-49%);
-    user-select: none;
-  }
-}
-
-.plus:hover {
-  border: 2px solid orangered;
-  background-color: orangered;
-  .plusSign:hover {
-    color: white;
-  }
-}
-
 .footerDiv {
   z-index: 1;
   background-color: rgb(80, 80, 80);
@@ -86,6 +59,7 @@ body {
     text-decoration: none;
     display: inline-block;
     color: $linkColor;
+    transition: color 0.1s linear;
   }
   .subs:hover {
     color: rgb(255, 115, 0);
@@ -106,7 +80,8 @@ body {
   margin-bottom: 30px;
   .postDiv {
     border: 2px solid black;
-    padding: 20px;
+    border-radius: 5px;
+    padding: 10px;
     height: var(--postBoxHeight);
     width: var(--postBoxWidth);
     margin-left: 20px;
@@ -115,20 +90,24 @@ body {
     margin-bottom: 20px;
     background-color: white;
     overflow: auto;
+    transition: transform 0.15s ease-in;
   }
   .postDiv:hover {
     border: 5px solid orangered;
-    padding: 17px;
+    padding: 7px;
     -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+    transform: translateY(-5px);
   }
   .postDiv::-webkit-scrollbar {
     display: none; // hide the scroll bar
   }
   .title {
+    color: black;
     margin-top: 0%;
     margin-bottom: 2%;
+    font-size: 1.3em;
     font-family: $titleFont;
     font-weight: bold;
     line-height: 1;
@@ -149,6 +128,9 @@ body {
     font-size: 15px;
     word-wrap: break-word;
     line-height: 1.5;
+  }
+  a {
+    text-decoration: none;
   }
 }
 
