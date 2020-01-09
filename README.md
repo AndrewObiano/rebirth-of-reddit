@@ -1,3 +1,5 @@
+To view, make sure to run ["live-server"](https://www.npmjs.com/package/live-server) in the `/public` directory.
+
 # Rebirth of Reddit
 
 Super Awesome Co. has just been asked to concept a new Reddit theme. This is super last minute but we need to come up with a few concepts to propose to them by tomorrow. This could be huge for us and really put our shop on the map. We have to drop everything at once to hit this deadline.
