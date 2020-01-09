@@ -1,0 +1,170 @@
+:root {
+  --contentPadding: 700px;
+  --postBoxHeight: 400px;
+  --postBoxWidth: 300px; }
+
+body {
+  margin: -3px;
+  overflow-x: hidden; }
+
+.headerDiv {
+  background-color: white;
+  background-image: url("../assets/header_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 410px 10px;
+  background-position-x: center;
+  background-position-y: center; }
+  .headerDiv .logo {
+    width: 120px;
+    height: 60px;
+    display: block;
+    margin: 0 auto; }
+
+.footerDiv {
+  z-index: 1;
+  background-color: #505050;
+  padding: 2px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center; }
+  .footerDiv .ig:hover {
+    content: url("../assets/instagram_orange.svg"); }
+
+.topBar {
+  height: 25%;
+  width: 100%;
+  background-color: #505050;
+  text-align: center;
+  padding: 10px; }
+  .topBar .subs {
+    font-family: "Oswald", sans-serif;
+    font-weight: 800;
+    font-size: 1em;
+    margin-left: 0.15em;
+    margin-right: 0.15em;
+    text-decoration: none;
+    display: inline-block;
+    color: #c4c4c4;
+    transition: color 0.1s linear; }
+  .topBar .subs:hover {
+    color: #ff7300;
+    text-shadow: 0px 2px 5px black; }
+
+#contents {
+  margin-top: 0%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url("../assets/bg.jpg");
+  padding-left: var(--contentPadding);
+  padding-right: var(--contentPadding);
+  margin-bottom: 30px; }
+  #contents .postDiv {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    height: var(--postBoxHeight);
+    width: var(--postBoxWidth);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 2.5%;
+    margin-bottom: 20px;
+    background-color: white;
+    overflow: auto;
+    transition: transform 0.15s ease-in; }
+  #contents .postDiv:hover {
+    border: 5px solid orangered;
+    padding: 7px;
+    -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
+    transform: translateY(-5px); }
+  #contents .postDiv::-webkit-scrollbar {
+    display: none; }
+  #contents .title {
+    color: black;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    font-size: 1.3em;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    line-height: 1; }
+  #contents .postPic {
+    height: 200px;
+    width: var(--postBoxWidth);
+    object-fit: contain; }
+  #contents .postTime {
+    margin-top: 0%;
+    font-family: "Lato", sans-serif;
+    opacity: 0.5;
+    font-size: 1em; }
+  #contents .postText {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    word-wrap: break-word;
+    line-height: 1.5; }
+  #contents a {
+    text-decoration: none; }
+
+@media only screen and (max-width: 2200px) {
+  :root {
+    --contentPadding: 550px; } }
+
+@media only screen and (max-width: 1900px) {
+  :root {
+    --contentPadding: 400px; } }
+
+@media only screen and (max-width: 1600px) {
+  :root {
+    --contentPadding: 300px; } }
+
+@media only screen and (max-width: 1400px) {
+  :root {
+    --contentPadding: 150px; } }
+
+@media only screen and (max-width: 1100px) {
+  :root {
+    --contentPadding: 50px; } }
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --contentPadding: 10px; } }
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --contentPadding: 10px;
+    --postBoxHeight: 300px;
+    --postBoxWidth: 225px; } }
+
+@media only screen and (max-width: 700px) {
+  :root {
+    --contentPadding: 50px;
+    --postBoxHeight: 200px;
+    --postBoxWidth: 170px; }
+  #contents .postDiv {
+    padding: 5px; }
+  #contents .postDiv:hover {
+    padding: 2px; }
+  #contents .title {
+    font-size: 1em; }
+  #contents .postTime {
+    font-size: 0.5em; }
+  #contents .postText {
+    font-size: 0.5em; } }
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --contentPadding: 20px; } }
+
+@media only screen and (max-width: 500px) {
+  :root {
+    --contentPadding: 15px;
+    --postBoxHeight: 150px;
+    --postBoxWidth: 120px; }
+  #contents .postDiv {
+    margin-left: 10px;
+    margin-right: 10px; } }
