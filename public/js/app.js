@@ -7,6 +7,7 @@ let contents = document.getElementById("contents");
 
 function redditReq() {
   let obj = JSON.parse(this.responseText);
+  console.log(obj);
 
   contents.innerHTML = ""; // clears previous contents
 
@@ -24,10 +25,15 @@ function redditReq() {
       postDiv.appendChild(postPic);
     }
 
+    let link = document.createElement("a");
+    link.className = "link";
+    link.href = obj.data.children[i].data.url;
+    postDiv.appendChild(link);
+
     let postTitle = document.createElement("h2");
     postTitle.className = "title";
     postTitle.innerHTML = obj.data.children[i].data.title;
-    postDiv.appendChild(postTitle);
+    link.appendChild(postTitle);
 
     let postTime = document.createElement("p");
     postTime.className = "postTime";
@@ -101,5 +107,5 @@ document.querySelectorAll(".subs")[6].addEventListener("click", function() {
 
 // MY INSTAGRAM
 document.querySelector(".ig").addEventListener("click", function() {
-  window.location = "https://www.instagram.com/andrewobiano/";
+  window.location = "https://www.instagram.com/reddit/";
 });
